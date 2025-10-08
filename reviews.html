@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read reviews and leave your feedback for Suzanne's Place in Dorrance, KS">
+    <title>Reviews | Suzanne's Place</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #D2691E;
+            --secondary-color: #8B4513;
+            --accent-color: #FF8C00;
+            --dark-bg: #2C1810;
+            --light-bg: #F5E6D3;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2C1810;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--dark-bg);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--light-bg);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light-bg);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        main {
+            margin-top: 70px;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+        
+        .rating-summary {
+            background: var(--accent-color);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .rating-summary h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stars {
+            font-size: 2rem;
+            color: #FFD700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .review-count {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .reviews-section, .submit-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .review-card {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .reviewer-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+        
+        .review-date {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .review-stars {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .review-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .star-rating {
+            display: flex;
+            gap: 0.5rem;
+            font-size: 2rem;
+        }
+        
+        .star-rating input[type="radio"] {
+            display: none;
+        }
+        
+        .star-rating label {
+            cursor: pointer;
+            color: #ddd;
+            transition: color 0.2s;
+        }
+        
+        .star-rating input[type="radio"]:checked ~ label,
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: #FFD700;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        
+        .required {
+            color: red;
+        }
+        
+        footer {
+            background: var(--dark-bg);
+            color: var(--light-bg);
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 968px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                flex-direction: column;
+                background: var(--dark-bg);
+                width: 100%;
+                padding: 2rem;
+                transition: left 0.3s;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Suzanne's Place</a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="specials.html">Daily Specials</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="beer.html">Beer & Drinks</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <h1 class="page-title">Customer Reviews</h1>
+        <p class="subtitle">See what our customers are saying and share your experience!</p>
+
+        <div class="rating-summary">
+            <h3>4.8 ⭐</h3>
+            <div class="stars">★★★★★</div>
+            <p class="review-count">Based on customer reviews</p>
+        </div>
+
+        <div class="content-grid">
+            <!-- Reviews Display Section -->
+            <div class="reviews-section">
+                <h2 class="section-title">Recent Reviews</h2>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer-name">John D.</span>
+                        <span class="review-date">2 weeks ago</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Best burger in town! The bacon cheeseburger was cooked perfectly and the fries were crispy and delicious. Great local spot with friendly service.</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer-name">Sarah M.</span>
+                        <span class="review-date">3 weeks ago</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Love Taco Tuesday! The prices are great and the tacos are fresh and flavorful. Cold beer selection is excellent too. Definitely coming back!</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer-name">Mike R.</span>
+                        <span class="review-date">1 month ago</span>
+                    </div>
+                    <div class="review-stars">★★★★☆</div>
+                    <p class="review-text">Great atmosphere and good food. The piglets appetizer was amazing! Only wish they were open a bit later on Sundays.</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer-name">Lisa K.</span>
+                        <span class="review-date">1 month ago</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Suzanne's homemade chili is incredible! Perfect comfort food. The staff is super friendly and makes you feel like family. This is our go-to spot!</p>
+                </div>
+            </div>
+
+            <!-- Submit Review Section -->
+            <div class="submit-section">
+                <h2 class="section-title">Leave a Review</h2>
+                
+                <!-- Replace YOUR_FORM_ID with your actual Formspree form ID -->
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Rating <span class="required">*</span></label>
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5" required>
+                            <label for="star5">★</label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4">★</label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3">★</label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2">★</label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1">★</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="review">Your Review <span class="required">*</span></label>
+                        <textarea id="review" name="review" required placeholder="Tell us about your experience at Suzanne's Place..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Review</button>
+                </form>
+
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    Your review will be reviewed before being published on our website. Thank you for your feedback!
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p><strong>Suzanne's Place</strong></p>
+        <p>310 U.S. Hwy 40, Dorrance, KS 67634</p>
+        <p>Phone: <a href="tel:+17856664242">(785) 666-4242</a></p>
+        <p style="margin-top: 1rem;">&copy; 2025 Suzanne's Place. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Star rating functionality
+        const starRating = document.querySelector('.star-rating');
+        const stars = starRating.querySelectorAll('label');
+        
+        stars.forEach((star, index) => {
+            star.addEventListener('mouseover', () => {
+                stars.forEach((s, i) => {
+                    if (i >= index) {
+                        s.style.color = '#FFD700';
+                    } else {
+                        s.style.color = '#ddd';
+                    }
+                });
+            });
+            
+            star.addEventListener('click', () => {
+                stars.forEach((s, i) => {
+                    if (i >= index) {
+                        s.style.color = '#FFD700';
+                    } else {
+                        s.style.color = '#ddd';
+                    }
+                });
+            });
+        });
+        
+        starRating.addEventListener('mouseleave', () => {
+            const checked = starRating.querySelector('input:checked');
+            if (checked) {
+                const checkedIndex = Array.from(starRating.querySelectorAll('input')).indexOf(checked);
+                stars.forEach((s, i) => {
+                    if (i >= checkedIndex) {
+                        s.style.color = '#FFD700';
+                    } else {
+                        s.style.color = '#ddd';
+                    }
+                });
+            } else {
+                stars.forEach(s => s.style.color = '#ddd');
+            }
+        });
+    </script>
+</body>
+</html>
