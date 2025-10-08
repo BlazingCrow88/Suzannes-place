@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Great food and cold beer in Dorrance, Kansas. Home cooking, daily specials, and a full bar. Open daily!">
-    <title>Suzanne's Place | Dorrance, KS | Great Food, Cold Beer, Good Times</title>
+    <meta name="description" content="Great food and cold beer in Dorrance, Kansas. Home cooking, daily specials, and a full bar. Open daily 11am-9pm!">
+    <title>Suzanne's Place | Dorrance, KS | Cold Beer, Great Food!</title>
     
     <style>
         * {
@@ -50,10 +50,19 @@
         }
         
         .logo {
-            color: var(--accent-color);
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+            color: #5A5A5A;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.4),
+                         1px 1px 2px rgba(0, 0, 0, 0.3);
             text-decoration: none;
+            font-style: italic;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        
+        .logo:hover {
+            color: var(--accent-color);
         }
         
         .nav-links {
@@ -98,15 +107,17 @@
         }
         
         .hero-content h1 {
-            font-size: 3.5rem;
+            font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+            font-size: 4rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+            font-style: italic;
         }
         
         .hero-content p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
         
         .cta-button {
@@ -254,8 +265,12 @@
                 display: block;
             }
             
-            .hero-content h1 {
+            .logo {
                 font-size: 2rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
             }
             
             .hero-content p {
@@ -313,8 +328,8 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Welcome to Suzanne's Place</h1>
-            <p>Great Food, Cold Beer, Good Times</p>
+            <h1>Suzanne's Place</h1>
+            <p>Cold Beer | Great Food!</p>
             <a href="menu.html" class="cta-button">VIEW MENU</a>
             <a href="specials.html" class="cta-button">DAILY SPECIALS</a>
         </div>
@@ -337,8 +352,8 @@
             
             <div class="info-card">
                 <h3>🕐 Hours</h3>
-                <p>Open Daily<br>See full hours</p>
-                <a href="contact.html">View Hours</a>
+                <p><strong>11am - 9pm daily</strong></p>
+                <p>Dine in or Carry-Out<br>Indoor and Outdoor Seating available</p>
             </div>
         </div>
     </section>
@@ -390,8 +405,9 @@
         <p><strong>Suzanne's Place</strong></p>
         <p>310 U.S. Hwy 40, Dorrance, KS 67634</p>
         <p>Phone: <a href="tel:+17856664242">(785) 666-4242</a></p>
-        <p style="margin-top: 1rem;">&copy; 2025 Suzanne's Place. All rights reserved.</p>
-        <p>Great Food | Cold Beer | Good Times</p>
+        <p style="margin-top: 1rem;">11am - 9pm daily | Dine in or Carry-Out</p>
+        <p>&copy; 2025 Suzanne's Place. All rights reserved.</p>
+        <p>Cold Beer | Great Food!</p>
     </footer>
 
     <script>
