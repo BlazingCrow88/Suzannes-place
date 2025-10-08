@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beer and beverage menu at Suzanne's Place - Domestic beers, specialty drinks, and more in Dorrance, KS">
+    <title>Beer & Beverages | Suzanne's Place</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #D2691E;
+            --secondary-color: #8B4513;
+            --accent-color: #FF8C00;
+            --dark-bg: #2C1810;
+            --light-bg: #F5E6D3;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2C1810;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--dark-bg);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--light-bg);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light-bg);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        main {
+            margin-top: 70px;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .hero-image {
+            width: 100%;
+            max-height: 400px;
+            margin-bottom: 3rem;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .happy-hour-box {
+            background: var(--accent-color);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .happy-hour-box h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .happy-hour-box p {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .beer-section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .price-header {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .beer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .beer-item {
+            background: var(--light-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .beer-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+        
+        .beverage-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .beverage-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .beverage-item:last-child {
+            border-bottom: none;
+        }
+        
+        .beverage-name {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+        }
+        
+        .beverage-price {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        
+        .soda-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .soda-item {
+            padding: 0.5rem;
+            background: var(--light-bg);
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        footer {
+            background: var(--dark-bg);
+            color: var(--light-bg);
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                flex-direction: column;
+                background: var(--dark-bg);
+                width: 100%;
+                padding: 2rem;
+                transition: left 0.3s;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .beer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Suzanne's Place</a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="specials.html">Daily Specials</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="beer.html">Beer & Drinks</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <h1 class="page-title">Beer & Beverages</h1>
+
+        <div class="hero-image">
+            <!-- Replace with: <img src="images/beer-cooler.jpg" alt="Our Beer Selection"> -->
+            <p style="color: #666; padding: 2rem; text-align: center;">Add Photo: Beer Cooler / Beer Selection<br>(Use one of your uploaded beer photos)</p>
+        </div>
+
+        <div class="happy-hour-box">
+            <h3>🍻 Happy Hour Specials</h3>
+            <p><strong>Daily 3-5pm</strong></p>
+            <p><strong>Thursdays 9pm - 12am</strong> Happy Hour prices</p>
+            <p><strong>Sundays</strong> $2.00 Natural Light & Keystone</p>
+        </div>
+
+        <!-- $2.50 Beers -->
+        <div class="beer-section">
+            <h2 class="section-title">Beers</h2>
+            <div class="price-header">2.50</div>
+            <div class="beer-grid">
+                <div class="beer-item"><div class="beer-name">Keystone Natural Light</div></div>
+                <div class="beer-item"><div class="beer-name">Naturdays</div></div>
+                <div class="beer-item"><div class="beer-name">Pabst Blue Ribbon</div></div>
+            </div>
+
+            <!-- $3.00 Beers -->
+            <div class="price-header">3.00</div>
+            <div class="beer-grid">
+                <div class="beer-item"><div class="beer-name">Coors Light</div></div>
+                <div class="beer-item"><div class="beer-name">Coors Original</div></div>
+                <div class="beer-item"><div class="beer-name">Miller Lite</div></div>
+                <div class="beer-item"><div class="beer-name">Miller High Life</div></div>
+                <div class="beer-item"><div class="beer-name">Miller Genuine Draft</div></div>
+                <div class="beer-item"><div class="beer-name">Natural Light</div></div>
+                <div class="beer-item"><div class="beer-name">Michelob Ultra</div></div>
+                <div class="beer-item"><div class="beer-name">Budweiser</div></div>
+                <div class="beer-item"><div class="beer-name">Bud Light</div></div>
+                <div class="beer-item"><div class="beer-name">Bud Light Chelada</div></div>
+                <div class="beer-item"><div class="beer-name">Busch Light</div></div>
+                <div class="beer-item"><div class="beer-name">Yuengling Flight</div></div>
+                <div class="beer-item"><div class="beer-name">Yuengling Lager</div></div>
+            </div>
+
+            <!-- $3.50 Beers -->
+            <div class="price-header">3.50</div>
+            <div class="beer-grid">
+                <div class="beer-item"><div class="beer-name">Kona Big Wave</div></div>
+                <div class="beer-item"><div class="beer-name">Modelo</div></div>
+                <div class="beer-item"><div class="beer-name">Corona</div></div>
+                <div class="beer-item"><div class="beer-name">Heineken</div></div>
+                <div class="beer-item"><div class="beer-name">Blue Moon</div></div>
+                <div class="beer-item"><div class="beer-name">Mike's Strawberry</div></div>
+                <div class="beer-item"><div class="beer-name">Mike's Lemonade</div></div>
+                <div class="beer-item"><div class="beer-name">Mike's Mango</div></div>
+                <div class="beer-item"><div class="beer-name">Smirnoff Red, White, & Blue</div></div>
+                <div class="beer-item"><div class="beer-name">Twisted Tea</div></div>
+                <div class="beer-item"><div class="beer-name">Simply Spiked</div></div>
+                <div class="beer-item"><div class="beer-name">Shaken</div></div>
+                <div class="beer-item"><div class="beer-name">Michelob Infusion</div></div>
+            </div>
+
+            <!-- $4.00 Beers -->
+            <div class="price-header">4.00</div>
+            <div class="beer-grid">
+                <div class="beer-item"><div class="beer-name">Truly's White Claw</div></div>
+                <div class="beer-item"><div class="beer-name">16 oz Bud Light</div></div>
+                <div class="beer-item"><div class="beer-name">16 oz Chelada</div></div>
+                <div class="beer-item"><div class="beer-name">Ranch Water</div></div>
+            </div>
+        </div>
+
+        <!-- Other Beverages -->
+        <div class="beer-section">
+            <h2 class="section-title">Other Beverages</h2>
+            
+            <div class="beverage-section">
+                <div class="beverage-item">
+                    <div class="beverage-name">Kool-Aid Jammer</div>
+                    <div class="beverage-price">Free with Kids meal</div>
+                </div>
+                <div class="beverage-item">
+                    <div class="beverage-name">Coffee</div>
+                    <div class="beverage-price">1.95 (free refills)</div>
+                </div>
+                <div class="beverage-item">
+                    <div class="beverage-name">Tea</div>
+                    <div class="beverage-price">1.95 (free refills)</div>
+                </div>
+                <div class="beverage-item">
+                    <div class="beverage-name">Lemonade</div>
+                    <div class="beverage-price">1.95 (free refills)</div>
+                </div>
+                <div class="beverage-item">
+                    <div class="beverage-name">Tomato Juice</div>
+                    <div class="beverage-price">0.50</div>
+                </div>
+                <div class="beverage-item">
+                    <div class="beverage-name">Pickle Juice</div>
+                    <div class="beverage-price">0.25</div>
+                </div>
+                <div class="beverage-item">
+                    <div class="beverage-name">Milk</div>
+                    <div class="beverage-price">1.95</div>
+                </div>
+                <div class="beverage-item">
+                    <div class="beverage-name">Chocolate Milk</div>
+                    <div class="beverage-price">2.50</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sodas -->
+        <div class="beer-section">
+            <h2 class="section-title">Sodas - 1.00</h2>
+            <div class="soda-list">
+                <div class="soda-item">Dr. Pepper</div>
+                <div class="soda-item">Diet Dr. Pepper</div>
+                <div class="soda-item">Pepsi</div>
+                <div class="soda-item">Wild Cherry Pepsi</div>
+                <div class="soda-item">Diet Pepsi</div>
+                <div class="soda-item">Mountain Dew</div>
+                <div class="soda-item">Diet Mountain Dew</div>
+                <div class="soda-item">Coke</div>
+                <div class="soda-item">Diet Coke</div>
+                <div class="soda-item">Root Beer</div>
+                <div class="soda-item">Sprite</div>
+                <div class="soda-item">Squirt</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p><strong>Suzanne's Place</strong></p>
+        <p>310 U.S. Hwy 40, Dorrance, KS 67634</p>
+        <p>Phone: <a href="tel:+17856664242">(785) 666-4242</a></p>
+        <p style="margin-top: 1rem;">&copy; 2025 Suzanne's Place. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
