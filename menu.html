@@ -46,10 +46,19 @@
         }
         
         .logo {
-            color: var(--accent-color);
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+            color: #5A5A5A;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.4),
+                         1px 1px 2px rgba(0, 0, 0, 0.3);
             text-decoration: none;
+            font-style: italic;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        
+        .logo:hover {
+            color: var(--accent-color);
         }
         
         .nav-links {
@@ -87,10 +96,12 @@
         }
         
         .page-title {
-            font-size: 3rem;
+            font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+            font-size: 3.5rem;
             text-align: center;
             margin-bottom: 1rem;
             color: var(--secondary-color);
+            font-style: italic;
         }
         
         .menu-category {
@@ -98,11 +109,13 @@
         }
         
         .category-title {
-            font-size: 2rem;
+            font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+            font-size: 2.5rem;
             color: var(--secondary-color);
             margin-bottom: 1.5rem;
             border-bottom: 3px solid var(--accent-color);
             padding-bottom: 0.5rem;
+            font-style: italic;
         }
         
         .menu-note {
@@ -206,7 +219,15 @@
                 display: block;
             }
             
+            .logo {
+                font-size: 2rem;
+            }
+            
             .page-title {
+                font-size: 2.5rem;
+            }
+            
+            .category-title {
                 font-size: 2rem;
             }
             
@@ -247,13 +268,12 @@
                     <div class="item-content">
                         <div class="item-name">Southwestern Egg Rolls</div>
                         <div class="item-description">4 Homemade Southwest chicken egg rolls served with jalapeno cilantro sauce</div>
-                        <div class="item-price">12.95</div>
+                        <div class="item-price">8.95</div>
                     </div>
                 </div>
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/piglets.jpg" alt="Piglets"> -->
                         Add Photo: Piglets
                     </div>
                     <div class="item-content">
@@ -265,7 +285,6 @@
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/breaded-beef-bites.jpg" alt="Breaded Beef Bites"> -->
                         Add Photo: Breaded Beef Bites
                     </div>
                     <div class="item-content">
@@ -277,7 +296,6 @@
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/teppe-fries.jpg" alt="Teppe Fries"> -->
                         Add Photo: Teppe Fries
                     </div>
                     <div class="item-content">
@@ -289,7 +307,6 @@
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/french-fries.jpg" alt="French Fries"> -->
                         Add Photo: French Fries
                     </div>
                     <div class="item-content">
@@ -301,7 +318,16 @@
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/onion-rings.jpg" alt="Onion Rings"> -->
+                        Add Photo: Tator Tots
+                    </div>
+                    <div class="item-content">
+                        <div class="item-name">Tator Tots</div>
+                        <div class="item-price">3.50</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image">
                         Add Photo: Onion Rings
                     </div>
                     <div class="item-content">
@@ -312,7 +338,6 @@
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/fried-pickles.jpg" alt="Fried Pickles"> -->
                         Add Photo: Fried Pickles
                     </div>
                     <div class="item-content">
@@ -323,7 +348,26 @@
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/mozzarella-sticks.jpg" alt="Mozzarella Sticks"> -->
+                        Add Photo: Fried Mushrooms
+                    </div>
+                    <div class="item-content">
+                        <div class="item-name">Fried Mushrooms</div>
+                        <div class="item-price">5.95</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image">
+                        Add Photo: Bottlecaps
+                    </div>
+                    <div class="item-content">
+                        <div class="item-name">Bottlecaps</div>
+                        <div class="item-price">5.95</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image">
                         Add Photo: Mozzarella Sticks
                     </div>
                     <div class="item-content">
@@ -334,7 +378,6 @@
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/jalapeno-poppers.jpg" alt="Jalapeno Poppers"> -->
                         Add Photo: Jalapeno Poppers
                     </div>
                     <div class="item-content">
@@ -357,7 +400,6 @@
             <div class="menu-grid">
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/hamburger.jpg" alt="Hamburger"> -->
                         Add Photo: Hamburger
                     </div>
                     <div class="item-content">
@@ -369,7 +411,6 @@
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/cheeseburger.jpg" alt="Cheeseburger"> -->
                         Add Photo: Cheeseburger
                     </div>
                     <div class="item-content">
@@ -381,7 +422,6 @@
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/double-cheeseburger.jpg" alt="Double Cheeseburger"> -->
                         Add Photo: Double Cheeseburger
                     </div>
                     <div class="item-content">
@@ -393,7 +433,6 @@
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/bacon-cheeseburger.jpg" alt="Bacon Cheeseburger"> -->
                         Add Photo: Bacon Cheeseburger
                     </div>
                     <div class="item-content">
@@ -405,7 +444,6 @@
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/jalapeno-cheeseburger.jpg" alt="Jalapeno Cheeseburger"> -->
                         Add Photo: Jalapeno Cheeseburger
                     </div>
                     <div class="item-content">
@@ -417,7 +455,6 @@
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/mushroom-swiss-burger.jpg" alt="Mushroom Swiss Burger"> -->
                         Add Photo: Mushroom Swiss Burger
                     </div>
                     <div class="item-content">
@@ -429,7 +466,6 @@
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/breakfast-burger.jpg" alt="Breakfast Burger"> -->
                         Add Photo: Breakfast Burger
                     </div>
                     <div class="item-content">
@@ -441,7 +477,50 @@
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/grilled-chicken.jpg" alt="Grilled Chicken Sandwich"> -->
+                        Add Photo: Vikburger
+                    </div>
+                    <div class="item-content">
+                        <div class="item-name">*Vikburger</div>
+                        <div class="item-description">7 oz Burger patty with cheese, topped with grilled jalapenos and sauerkraut served with fries</div>
+                        <div class="item-price">10.95</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image">
+                        Add Photo: Patty Melt
+                    </div>
+                    <div class="item-content">
+                        <div class="item-name">*Patty Melt</div>
+                        <div class="item-description">7 oz Burger patty with swiss cheese and grilled onions on rye bread served with fries</div>
+                        <div class="item-price">10.95</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image">
+                        Add Photo: Reuben
+                    </div>
+                    <div class="item-content">
+                        <div class="item-name">Reuben</div>
+                        <div class="item-description">Corned beef, sauerkraut and swiss cheese on rye bread served with fries</div>
+                        <div class="item-price">11.95</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image">
+                        Add Photo: Ham & Cheese
+                    </div>
+                    <div class="item-content">
+                        <div class="item-name">Ham & Cheese</div>
+                        <div class="item-description">Ham & American Cheese served on Texas Toast served with fries. Grilled or cold</div>
+                        <div class="item-price">6.95</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image">
                         Add Photo: Grilled Chicken Sandwich
                     </div>
                     <div class="item-content">
@@ -453,7 +532,6 @@
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/chicken-strips.jpg" alt="Chicken Strips"> -->
                         Add Photo: Chicken Strips
                     </div>
                     <div class="item-content">
@@ -465,7 +543,6 @@
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/shrimp.jpg" alt="Fried Shrimp"> -->
                         Add Photo: Fried Shrimp
                     </div>
                     <div class="item-content">
@@ -477,7 +554,6 @@
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/fish.jpg" alt="Hand Breaded Fish"> -->
                         Add Photo: Hand Breaded Fish
                     </div>
                     <div class="item-content">
@@ -495,35 +571,144 @@
             <div class="menu-grid">
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/side-salad.jpg" alt="Side Salad"> -->
                         Add Photo: Side Salad
                     </div>
                     <div class="item-content">
                         <div class="item-name">Side Salad</div>
-                        <div class="item-price">3.95</div>
+                        <div class="item-price">2.95</div>
                     </div>
                 </div>
                 
                 <div class="menu-item">
                     <div class="item-image">
-                        <!-- Replace with: <img src="images/garden-salad.jpg" alt="Large Garden Salad"> -->
                         Add Photo: Large Garden Salad
                     </div>
                     <div class="item-content">
                         <div class="item-name">Large Garden Salad</div>
-                        <div class="item-description">Topped with choice of grilled or crispy chicken</div>
-                        <div class="item-price">7.95</div>
+                        <div class="item-description">Topped with choice of cubed ham, crispy or grilled chicken</div>
+                        <div class="item-price">9.25</div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Dressings & Sauces -->
+        <div class="menu-category">
+            <h2 class="category-title">Dressings & Sauces</h2>
+            <div class="menu-note">
+                Ranch, Italian, Honey Mustard, Dorothy Lynch, 57, A1, BBQ, Thousand Island, Country gravy - 0.50 ea<br>
+                Jalapeno Cilantro Ranch - 1.00<br>
+                *Based upon availability
+            </div>
+        </div>
+
         <!-- Kids Menu -->
         <div class="menu-category">
-            <h2 class="category-title">Lil' Suzy's Menu (Kids Menu)</h2>
+            <h2 class="category-title">Lil' Suzy's Menu</h2>
             <div class="menu-note">
-                *Hamburger / Cheeseburger<br>
-                5 oz hamburger served with fries - 6.00
+                Kids Menu (12 and under)
+            </div>
+            
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-image">
+                        Add Photo: Kids Hamburger
+                    </div>
+                    <div class="item-content">
+                        <div class="item-name">*Hamburger / Cheeseburger</div>
+                        <div class="item-description">5 oz hamburger served with fries</div>
+                        <div class="item-price">6.00</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image">
+                        Add Photo: Kids Hotdog
+                    </div>
+                    <div class="item-content">
+                        <div class="item-name">Hotdog</div>
+                        <div class="item-description">Beef Hotdog served with fries</div>
+                        <div class="item-price">5.00</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image">
+                        Add Photo: Grilled Cheese
+                    </div>
+                    <div class="item-content">
+                        <div class="item-name">Grilled Cheese</div>
+                        <div class="item-description">American cheese on Texas Toast served with fries</div>
+                        <div class="item-price">5.00</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image">
+                        Add Photo: Kids Chicken Strips
+                    </div>
+                    <div class="item-content">
+                        <div class="item-name">Chicken Strips</div>
+                        <div class="item-description">2 Chicken strips served with fries</div>
+                        <div class="item-price">6.00</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image">
+                        Add Photo: Popcorn Chicken
+                    </div>
+                    <div class="item-content">
+                        <div class="item-name">Popcorn Chicken</div>
+                        <div class="item-description">Fried chicken bites served with fries</div>
+                        <div class="item-price">6.00</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image">
+                        Add Photo: Breaded Beef Bites
+                    </div>
+                    <div class="item-content">
+                        <div class="item-name">Breaded Beef Bites</div>
+                        <div class="item-description">6 Breaded beef bites & gravy served with fries</div>
+                        <div class="item-price">6.00</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image">
+                        Add Photo: PB&J and Fruit
+                    </div>
+                    <div class="item-content">
+                        <div class="item-name">PB & J and Fruit</div>
+                        <div class="item-price">5.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desserts -->
+        <div class="menu-category">
+            <h2 class="category-title">Desserts</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-image">
+                        Add Photo: Homemade Cookies
+                    </div>
+                    <div class="item-content">
+                        <div class="item-name">Homemade Cookies</div>
+                        <div class="item-price">1.00 / 2</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Chili -->
+        <div class="menu-category">
+            <h2 class="category-title">Extras</h2>
+            <div class="menu-note">
+                Add chili to anything - 2.00
             </div>
         </div>
     </main>
@@ -532,7 +717,8 @@
         <p><strong>Suzanne's Place</strong></p>
         <p>310 U.S. Hwy 40, Dorrance, KS 67634</p>
         <p>Phone: <a href="tel:+17856664242">(785) 666-4242</a></p>
-        <p style="margin-top: 1rem;">&copy; 2025 Suzanne's Place. All rights reserved.</p>
+        <p style="margin-top: 1rem;">11am - 9pm daily | Dine in or Carry-Out</p>
+        <p>&copy; 2025 Suzanne's Place. All rights reserved.</p>
     </footer>
 
     <script>
