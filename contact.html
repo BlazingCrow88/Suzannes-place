@@ -3,365 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Suzanne's Place - Location, hours, and directions in Dorrance, Kansas">
-    <title>Contact Us | Suzanne's Place</title>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary-color: #D2691E;
-            --secondary-color: #8B4513;
-            --accent-color: #FF8C00;
-            --dark-bg: #2C1810;
-            --light-bg: #F5E6D3;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #2C1810;
-        }
-        
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: var(--dark-bg);
-            padding: 1rem 2rem;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-        
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            color: var(--accent-color);
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: var(--light-bg);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--accent-color);
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--light-bg);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        main {
-            margin-top: 70px;
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .page-title {
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 1rem;
-            color: var(--secondary-color);
-        }
-        
-        .subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 3rem;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .contact-card {
-            background: var(--light-bg);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        .contact-card h3 {
-            font-size: 1.8rem;
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .contact-card p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 0.5rem;
-        }
-        
-        .contact-card a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        
-        .contact-card a:hover {
-            text-decoration: underline;
-        }
-        
-        .hours-table {
-            width: 100%;
-            margin-top: 1rem;
-        }
-        
-        .hours-table td {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-        }
-        
-        .hours-table td:first-child {
-            font-weight: bold;
-            color: var(--secondary-color);
-        }
-        
-        .hours-table tr:last-child td {
-            border-bottom: none;
-        }
-        
-        .map-section {
-            margin-top: 3rem;
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        .map-section h2 {
-            font-size: 2rem;
-            color: var(--secondary-color);
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        
-        .map-container {
-            width: 100%;
-            height: 450px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
-        
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        .cta-section {
-            background: var(--accent-color);
-            color: white;
-            padding: 3rem 2rem;
-            border-radius: 10px;
-            text-align: center;
-            margin-top: 3rem;
-        }
-        
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: white;
-            color: var(--accent-color);
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            margin: 0.5rem;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-        }
-        
-        footer {
-            background: var(--dark-bg);
-            color: var(--light-bg);
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        footer a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                flex-direction: column;
-                background: var(--dark-bg);
-                width: 100%;
-                padding: 2rem;
-                transition: left 0.3s;
-            }
-            
-            .nav-links.active {
-                left: 0;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .page-title {
-                font-size: 2rem;
-            }
-            
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .map-container {
-                height: 300px;
-            }
-        }
-    </style>
+    <meta name="description" content="Contact Suzanne's Place bar and grill in Dorrance, Kansas. Address, phone, hours, and directions.">
+    <title>Contact Us | Suzanne's Place - Dorrance, KS</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">Suzanne's Place</a>
-            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="specials.html">Daily Specials</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="beer.html">Beer & Drinks</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main>
-        <h1 class="page-title">Visit Us</h1>
-        <p class="subtitle">We're located in Dorrance, Kansas on Highway 40</p>
-
-        <div class="contact-grid">
-            <div class="contact-card">
-                <h3>📍 Location</h3>
-                <p><strong>Suzanne's Place</strong></p>
-                <p>310 U.S. Hwy 40<br>Dorrance, KS 67634</p>
-                <a href="https://www.google.com/maps/search/?api=1&query=310+US+Hwy+40+Dorrance+KS+67634" target="_blank" rel="noopener">Get Directions →</a>
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <h1 class="logo-text">Suzanne's Place</h1>
+                    <p class="tagline">Cold Beer, Great Food</p>
+                </div>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="daily-specials.html">Daily Specials</a></li>
+                        <li><a href="menu.html">Full Menu</a></li>
+                        <li><a href="beer-beverages.html">Beer & Beverages</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-
-            <div class="contact-card">
-                <h3>📞 Phone</h3>
-                <p>Give us a call!</p>
-                <a href="tel:+17856664242">(785) 666-4242</a>
-                <p style="margin-top: 1rem; font-size: 0.95rem;">Click to call on mobile devices</p>
-            </div>
-
-            <div class="contact-card">
-                <h3>🕐 Hours</h3>
-                <p><strong>Open Daily</strong></p>
-                <table class="hours-table">
-                    <tr>
-                        <td>Monday - Thursday</td>
-                        <td>11:00 AM - 10:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td>Friday - Saturday</td>
-                        <td>11:00 AM - 11:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td>Sunday</td>
-                        <td>11:00 AM - 9:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style="padding-top: 1rem; font-style: italic; color: #666;">
-                            <strong>Special:</strong> Wednesday Breakfast 8am-11am
-                        </td>
-                    </tr>
-                </table>
+            
+            <div class="header-info">
+                <div class="info-item">
+                    <span class="icon">📍</span>
+                    <span>310 U.S. Hwy 40, Dorrance, KS</span>
+                </div>
+                <div class="info-item">
+                    <span class="icon">📞</span>
+                    <a href="tel:+17856000000" class="phone-link">Call Now: (785) 600-0000</a>
+                </div>
+                <div class="info-item">
+                    <span class="icon">🕐</span>
+                    <span>Daily 11 AM - 9 PM | Breakfast: Wed & Sun 8-11 AM</span>
+                </div>
             </div>
         </div>
+    </header>
 
-        <div class="map-section">
-            <h2>Find Us on the Map</h2>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>310 U.S. Hwy 40<br>
+                    Dorrance, KS 67344</p>
+                    <a href="https://maps.google.com/?q=310+US+Highway+40+Dorrance+KS+67344" target="_blank" class="link-arrow">Get Directions →</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+17856000000" class="phone-large">(785) 600-0000</a></p>
+                    <p class="contact-note">Call for carry-out orders or questions</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">🕐</div>
+                    <h3>Hours</h3>
+                    <div class="hours-list-contact">
+                        <div class="hours-item">
+                            <span>Monday - Sunday</span>
+                            <span>11:00 AM - 9:00 PM</span>
+                        </div>
+                        <div class="hours-item special-hours">
+                            <span>Wednesday Breakfast</span>
+                            <span>8:00 AM - 11:00 AM</span>
+                        </div>
+                        <div class="hours-item special-hours">
+                            <span>Sunday Breakfast</span>
+                            <span>8:00 AM - 11:00 AM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Find Us</h2>
             <div class="map-container">
-                <!-- Replace this URL with your actual Google Maps embed -->
+                <!-- Replace this iframe src with your actual Google Maps embed code -->
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3095.7463841289873!2d-98.60093492399997!3d39.05849907168882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87a28c7a57e9e9e9%3A0x1!2s310%20US-40%2C%20Dorrance%2C%20KS%2067634!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3091.234567890123!2d-98.5849999!3d38.8595000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDUxJzM0LjIiTiA5OMKwMzUnMDYuMCJX!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
                     allowfullscreen="" 
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Suzanne's Place location map">
                 </iframe>
             </div>
         </div>
+    </section>
 
-        <div class="cta-section">
-            <h2>Ready to Visit?</h2>
-            <p>Stop by for great food, cold beer, and good times!</p>
-            <a href="tel:+17856664242" class="cta-button">Call to Reserve</a>
-            <a href="menu.html" class="cta-button">View Our Menu</a>
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-intro">
+                <h2>Send Us a Message</h2>
+                <p>Have a question, comment, or suggestion? We'd love to hear from you!</p>
+            </div>
+
+            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact-name">Your Name *</label>
+                        <input type="text" id="contact-name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-email">Email Address *</label>
+                        <input type="email" id="contact-email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact-phone">Phone Number</label>
+                        <input type="tel" id="contact-phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-subject">Subject *</label>
+                        <select id="contact-subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="catering">Catering Request</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="suggestion">Suggestion</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact-message">Your Message *</label>
+                    <textarea id="contact-message" name="message" rows="6" required placeholder="Tell us how we can help..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                
+                <p class="form-note">* Required fields. We'll get back to you as soon as possible.</p>
+            </form>
         </div>
-    </main>
+    </section>
 
-    <footer>
-        <p><strong>Suzanne's Place</strong></p>
-        <p>310 U.S. Hwy 40, Dorrance, KS 67634</p>
-        <p>Phone: <a href="tel:+17856664242">(785) 666-4242</a></p>
-        <p style="margin-top: 1rem;">&copy; 2025 Suzanne's Place. All rights reserved.</p>
-        <p>Great Food | Cold Beer | Good Times</p>
-    </footer>
+    <!-- Dining Options -->
+    <section class="dining-options-section">
+        <div class="container">
+            <h2 class="section-title">Dining Options</h2>
+            <div class="options-grid">
+                <div class="option-card">
+                    <h3>🍽️ Dine-In</h3>
+                    <p>Enjoy your meal in our comfortable dining area with indoor and outdoor seating available.</p>
+                </div>
 
-    <script>
-        function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
-        }
-    </script>
-</body>
-</html>
+                <div class="option-card">
+                    <h3>📦 Carry-Out</h3>
+                    <p>Call ahead to place your order and pick it up at your convenience. No delivery fees!</p>
+                </div>
+
+                <div class="option-card">
+                    <h3>🎉 Groups Welcome</h3>
+                    <p>Planning a group outing or celebration? We welcome groups of all sizes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Visit Us Today</h2>
+                <p>Experience great food, cold beer, and friendly service</p>
+                <div class="cta-buttons">
+                    <a href="tel:+17856000000" class="btn btn-primary">Call to Order</a>
+                    <a href="menu.html" class="btn btn-outline">View Menu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <!-- Email Signup in Footer -->
+            <div class="footer-newsletter">
+                <h3>Stay Connected</h3>
+                <p>Get our latest specials and events delivered to your inbox</p>
+                <form class="footer-newsletter-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+            
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Suzanne's Place</h3>
+                    <p>Your neighborhood bar and grill</p>
+                    <p class="footer-tagline">Cold Beer, Great Food</p>
+                    <p class="footer-email">Email: <a href="/cdn-cgi/l/email-protection#e78e898188a794929d8689898294978b868482c984888a"><span class="__cf_email__" data-cfemail="51383f373e1122242b303f3f3422213d3032347f323e3c">[email&#160;protected]</span></a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Full Menu</a></li>
+                        <li><a href="daily-specials.html">Daily Specials</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>310 U.S. Hwy 40<br>Dorrance, KS 67344</p>
+                    <p><a href="tel:+17856000000">(785) 600-0000</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <p>Daily: 11 AM - 9 PM</p>
+                    <p>Breakfast: Wed & Sun 8-11 AM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Suzanne's Place. All rights reserved.</p>
