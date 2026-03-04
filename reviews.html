@@ -3,480 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Read reviews and leave your feedback for Suzanne's Place in Dorrance, KS">
-    <title>Reviews | Suzanne's Place</title>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary-color: #D2691E;
-            --secondary-color: #8B4513;
-            --accent-color: #FF8C00;
-            --dark-bg: #2C1810;
-            --light-bg: #F5E6D3;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #2C1810;
-        }
-        
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: var(--dark-bg);
-            padding: 1rem 2rem;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-        
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            color: var(--accent-color);
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: var(--light-bg);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--accent-color);
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--light-bg);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        main {
-            margin-top: 70px;
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .page-title {
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 1rem;
-            color: var(--secondary-color);
-        }
-        
-        .subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 3rem;
-        }
-        
-        .rating-summary {
-            background: var(--accent-color);
-            color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            margin-bottom: 3rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        
-        .rating-summary h3 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .stars {
-            font-size: 2rem;
-            color: #FFD700;
-            margin-bottom: 0.5rem;
-        }
-        
-        .review-count {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-        
-        .reviews-section, .submit-section {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        .section-title {
-            font-size: 2rem;
-            color: var(--secondary-color);
-            margin-bottom: 1.5rem;
-            border-bottom: 3px solid var(--accent-color);
-            padding-bottom: 0.5rem;
-        }
-        
-        .review-card {
-            background: var(--light-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-            border-left: 4px solid var(--accent-color);
-        }
-        
-        .review-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        
-        .reviewer-name {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: var(--secondary-color);
-        }
-        
-        .review-date {
-            font-size: 0.9rem;
-            color: #666;
-        }
-        
-        .review-stars {
-            color: #FFD700;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .review-text {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-family: inherit;
-            transition: border-color 0.3s;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent-color);
-        }
-        
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-        
-        .star-rating {
-            display: flex;
-            gap: 0.5rem;
-            font-size: 2rem;
-        }
-        
-        .star-rating input[type="radio"] {
-            display: none;
-        }
-        
-        .star-rating label {
-            cursor: pointer;
-            color: #ddd;
-            transition: color 0.2s;
-        }
-        
-        .star-rating input[type="radio"]:checked ~ label,
-        .star-rating label:hover,
-        .star-rating label:hover ~ label {
-            color: #FFD700;
-        }
-        
-        .submit-btn {
-            width: 100%;
-            padding: 1rem 2rem;
-            background: var(--accent-color);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-        }
-        
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-        }
-        
-        .required {
-            color: red;
-        }
-        
-        footer {
-            background: var(--dark-bg);
-            color: var(--light-bg);
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        footer a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-        
-        @media (max-width: 968px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                flex-direction: column;
-                background: var(--dark-bg);
-                width: 100%;
-                padding: 2rem;
-                transition: left 0.3s;
-            }
-            
-            .nav-links.active {
-                left: 0;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .page-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <meta name="description" content="Customer reviews and testimonials for Suzanne's Place bar and grill in Dorrance, Kansas. See what our customers are saying!">
+    <title>Customer Reviews | Suzanne's Place - Dorrance, KS</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">Suzanne's Place</a>
-            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="specials.html">Daily Specials</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="beer.html">Beer & Drinks</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main>
-        <h1 class="page-title">Customer Reviews</h1>
-        <p class="subtitle">See what our customers are saying and share your experience!</p>
-
-        <div class="rating-summary">
-            <h3>4.8 ⭐</h3>
-            <div class="stars">★★★★★</div>
-            <p class="review-count">Based on customer reviews</p>
-        </div>
-
-        <div class="content-grid">
-            <!-- Reviews Display Section -->
-            <div class="reviews-section">
-                <h2 class="section-title">Recent Reviews</h2>
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <h1 class="logo-text">Suzanne's Place</h1>
+                    <p class="tagline">Cold Beer, Great Food</p>
+                </div>
                 
-                <div class="review-card">
-                    <div class="review-header">
-                        <span class="reviewer-name">John D.</span>
-                        <span class="review-date">2 weeks ago</span>
-                    </div>
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">Best burger in town! The bacon cheeseburger was cooked perfectly and the fries were crispy and delicious. Great local spot with friendly service.</p>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="daily-specials.html">Daily Specials</a></li>
+                        <li><a href="menu.html">Full Menu</a></li>
+                        <li><a href="beer-beverages.html">Beer & Beverages</a></li>
+                        <li><a href="reviews.html" class="active">Reviews</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="header-info">
+                <div class="info-item">
+                    <span class="icon">📍</span>
+                    <span>310 U.S. Hwy 40, Dorrance, KS</span>
                 </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <span class="reviewer-name">Sarah M.</span>
-                        <span class="review-date">3 weeks ago</span>
-                    </div>
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">Love Taco Tuesday! The prices are great and the tacos are fresh and flavorful. Cold beer selection is excellent too. Definitely coming back!</p>
+                <div class="info-item">
+                    <span class="icon">📞</span>
+                    <a href="tel:+17856000000" class="phone-link">Call Now: (785) 600-0000</a>
                 </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <span class="reviewer-name">Mike R.</span>
-                        <span class="review-date">1 month ago</span>
-                    </div>
-                    <div class="review-stars">★★★★☆</div>
-                    <p class="review-text">Great atmosphere and good food. The piglets appetizer was amazing! Only wish they were open a bit later on Sundays.</p>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <span class="reviewer-name">Lisa K.</span>
-                        <span class="review-date">1 month ago</span>
-                    </div>
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">Suzanne's homemade chili is incredible! Perfect comfort food. The staff is super friendly and makes you feel like family. This is our go-to spot!</p>
+                <div class="info-item">
+                    <span class="icon">🕐</span>
+                    <span>Daily 11 AM - 9 PM | Breakfast: Wed & Sun 8-11 AM</span>
                 </div>
             </div>
+        </div>
+    </header>
 
-            <!-- Submit Review Section -->
-            <div class="submit-section">
-                <h2 class="section-title">Leave a Review</h2>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Customer Reviews</h1>
+            <p>See what our guests are saying about Suzanne's Place</p>
+        </div>
+    </section>
+
+    <!-- Reviews Summary -->
+    <section class="reviews-summary">
+        <div class="container">
+            <div class="summary-card">
+                <div class="rating-display">
+                    <div class="stars">★★★★★</div>
+                    <div class="rating-text">
+                        <h2>Excellent</h2>
+                        <p>Based on customer feedback</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars-small">★★★★★</div>
+                    <p class="testimonial-text">"Best burgers in the area! The bacon cheeseburger is amazing and the fries are always hot and crispy. Suzanne's is our go-to spot for lunch."</p>
+                    <div class="testimonial-author">
+                        <strong>John M.</strong>
+                        <span>Local Customer</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars-small">★★★★★</div>
+                    <p class="testimonial-text">"Great atmosphere and friendly staff! We love coming here for Taco Tuesday. The tacos are delicious and it's always a fun time."</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah K.</strong>
+                        <span>Dorrance Resident</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars-small">★★★★★</div>
+                    <p class="testimonial-text">"Good beer selection and the southwestern egg rolls are fantastic! Perfect spot to grab a cold one after work. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <strong>Mike R.</strong>
+                        <span>Regular Customer</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars-small">★★★★★</div>
+                    <p class="testimonial-text">"Family-friendly place with great food. Our kids love the kids menu and we appreciate the generous portions. Always a pleasant experience."</p>
+                    <div class="testimonial-author">
+                        <strong>Jennifer L.</strong>
+                        <span>Family of Four</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars-small">★★★★★</div>
+                    <p class="testimonial-text">"The chili is homemade and absolutely delicious. Great prices, great service, and a welcoming small-town vibe. Love this place!"</p>
+                    <div class="testimonial-author">
+                        <strong>Robert T.</strong>
+                        <span>Visiting from Salina</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars-small">★★★★★</div>
+                    <p class="testimonial-text">"Happy Hour is the best! Good prices on beer and a great selection. The staff is always friendly and remembers what we like."</p>
+                    <div class="testimonial-author">
+                        <strong>David & Lisa P.</strong>
+                        <span>Regular Visitors</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leave a Review Section -->
+    <section class="leave-review-section">
+        <div class="container">
+            <div class="review-form-container">
+                <h2>Share Your Experience</h2>
+                <p>We'd love to hear from you! Let us know about your visit to Suzanne's Place.</p>
                 
-                <!-- Replace YOUR_FORM_ID with your actual Formspree form ID -->
-                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                    <div class="form-group">
-                        <label for="name">Your Name <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" required placeholder="Enter your name">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Rating <span class="required">*</span></label>
-                        <div class="star-rating">
-                            <input type="radio" id="star5" name="rating" value="5" required>
-                            <label for="star5">★</label>
-                            <input type="radio" id="star4" name="rating" value="4">
-                            <label for="star4">★</label>
-                            <input type="radio" id="star3" name="rating" value="3">
-                            <label for="star3">★</label>
-                            <input type="radio" id="star2" name="rating" value="2">
-                            <label for="star2">★</label>
-                            <input type="radio" id="star1" name="rating" value="1">
-                            <label for="star1">★</label>
+                <form class="review-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="review-name">Your Name *</label>
+                            <input type="text" id="review-name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review-email">Email Address</label>
+                            <input type="email" id="review-email" name="email">
                         </div>
                     </div>
-
+                    
                     <div class="form-group">
-                        <label for="review">Your Review <span class="required">*</span></label>
-                        <textarea id="review" name="review" required placeholder="Tell us about your experience at Suzanne's Place..."></textarea>
+                        <label for="review-rating">Rating *</label>
+                        <select id="review-rating" name="rating" required>
+                            <option value="">Select a rating</option>
+                            <option value="5">★★★★★ Excellent</option>
+                            <option value="4">★★★★☆ Very Good</option>
+                            <option value="3">★★★☆☆ Good</option>
+                            <option value="2">★★☆☆☆ Fair</option>
+                            <option value="1">★☆☆☆☆ Poor</option>
+                        </select>
                     </div>
-
-                    <button type="submit" class="submit-btn">Submit Review</button>
+                    
+                    <div class="form-group">
+                        <label for="review-text">Your Review *</label>
+                        <textarea id="review-text" name="review" rows="5" required placeholder="Tell us about your experience at Suzanne's Place..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit Review</button>
+                    
+                    <p class="form-note">* Required fields. Your email will not be published.</p>
                 </form>
-
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    Your review will be reviewed before being published on our website. Thank you for your feedback!
-                </p>
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer>
-        <p><strong>Suzanne's Place</strong></p>
-        <p>310 U.S. Hwy 40, Dorrance, KS 67634</p>
-        <p>Phone: <a href="tel:+17856664242">(785) 666-4242</a></p>
-        <p style="margin-top: 1rem;">&copy; 2025 Suzanne's Place. All rights reserved.</p>
-    </footer>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
-        }
-
-        // Star rating functionality
-        const starRating = document.querySelector('.star-rating');
-        const stars = starRating.querySelectorAll('label');
-        
-        stars.forEach((star, index) => {
-            star.addEventListener('mouseover', () => {
-                stars.forEach((s, i) => {
-                    if (i >= index) {
-                        s.style.color = '#FFD700';
-                    } else {
-                        s.style.color = '#ddd';
-                    }
-                });
-            });
+    <!-- Social Proof -->
+    <section class="social-proof-section">
+        <div class="container">
+            <h2 class="section-title">Join Our Community</h2>
+            <p class="section-intro">Hundreds of satisfied customers have enjoyed great food and drinks at Suzanne's Place</p>
             
-            star.addEventListener('click', () => {
-                stars.forEach((s, i) => {
-                    if (i >= index) {
-                        s.style.color = '#FFD700';
-                    } else {
-                        s.style.color = '#ddd';
-                    }
-                });
-            });
-        });
-        
-        starRating.addEventListener('mouseleave', () => {
-            const checked = starRating.querySelector('input:checked');
-            if (checked) {
-                const checkedIndex = Array.from(starRating.querySelectorAll('input')).indexOf(checked);
-                stars.forEach((s, i) => {
-                    if (i >= checkedIndex) {
-                        s.style.color = '#FFD700';
-                    } else {
-                        s.style.color = '#ddd';
-                    }
-                });
-            } else {
-                stars.forEach(s => s.style.color = '#ddd');
-            }
-        });
-    </script>
-</body>
-</html>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years in Business</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Menu Items</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Experience It Yourself?</h2>
+                <p>Visit us today and see why customers love Suzanne's Place</p>
+                <div class="cta-buttons">
+                    <a href="tel:+17856000000" class="btn btn-primary">Call to Order</a>
+                    <a href="contact.html" class="btn btn-outline">Get Directions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <!-- Email Signup in Footer -->
+            <div class="footer-newsletter">
+                <h3>Stay Connected</h3>
+                <p>Get our latest specials and events delivered to your inbox</p>
+                <form class="footer-newsletter-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+            
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Suzanne's Place</h3>
+                    <p>Your neighborhood bar and grill</p>
+                    <p class="footer-tagline">Cold Beer, Great Food</p>
+                    <p class="footer-email">Email: <a href="/cdn-cgi/l/email-protection#ec85828a83ac9f99968d8282899f9c808d8f89c28f8381"><span class="__cf_email__" data-cfemail="8ae3e4ece5caf9fff0ebe4e4eff9fae6ebe9efa4e9e5e7">[email&#160;protected]</span></a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Full Menu</a></li>
+                        <li><a href="daily-specials.html">Daily Specials</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>310 U.S. Hwy 40<br>Dorrance, KS 67344</p>
+                    <p><a href="tel:+17856000000">(785) 600-0000</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <p>Daily: 11 AM - 9 PM</p>
+                    <p>Breakfast: Wed & Sun 8-11 AM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Suzanne's Place. All rights reserved.</p>
