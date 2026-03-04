@@ -69,12 +69,6 @@ body {
     line-height: 1.6;
     color: var(--text-primary);
     background-color: var(--bg-cream);
-    /* Subtle logo watermark background */
-    background-image: url('images/suzannes-place-logo.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: 800px auto;
     position: relative;
 }
 
@@ -88,8 +82,8 @@ body::before {
     background-image: url('images/suzannes-place-logo.png');
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 800px auto;
-    opacity: 0.06;
+    background-size: cover;
+    opacity: 0.15;
     z-index: -1;
     pointer-events: none;
 }
@@ -1489,9 +1483,9 @@ ul {
 
 /* Tablet Portrait & Mobile Landscape (481px - 767px) - iPads portrait, phones landscape */
 @media (min-width: 481px) and (max-width: 767px) {
-    /* Background watermark tablet adjustments */
+    /* Background covers entire screen on tablet portrait */
     body::before {
-        background-size: 500px auto;
+        background-size: cover;
     }
     
     .container {
@@ -1513,9 +1507,9 @@ ul {
 
 /* Mobile Portrait (320px - 767px) - Most phones */
 @media (max-width: 768px) {
-    /* Background watermark mobile adjustments */
+    /* Background covers entire screen on mobile too */
     body::before {
-        background-size: 500px auto;
+        background-size: cover;
     }
     
     .header-content {
@@ -1627,9 +1621,9 @@ ul {
 
 /* Small Mobile (320px - 480px) - Small phones */
 @media (max-width: 480px) {
-    /* Background watermark small mobile adjustments */
+    /* Background covers entire screen on small mobile too */
     body::before {
-        background-size: 350px auto;
+        background-size: cover;
     }
     
     .hero-buttons {
