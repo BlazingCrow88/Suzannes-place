@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Full menu for Suzanne's Place bar and grill in Dorrance, Kansas. Burgers, appetizers, salads, kids menu, breakfast, and daily specials.">
+    <meta name="description" content="Full menu for Suzanne's Place bar and grill in Dorrance, Kansas. Breakfast, burgers, appetizers, salads, tacos, and daily specials.">
     <title>Full Menu | Suzanne's Place - Dorrance, KS</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -64,11 +64,12 @@
     <section class="menu-nav">
         <div class="container">
             <nav class="menu-categories">
+                <a href="#breakfast" class="menu-cat-link">Breakfast</a>
                 <a href="#starters" class="menu-cat-link">Starters & Sides</a>
-                <a href="#salads" class="menu-cat-link">Salads</a>
-                <a href="#burgers" class="menu-cat-link">Burgers & Sandwiches</a>
-                <a href="#kids" class="menu-cat-link">Kids Menu</a>
                 <a href="#specials" class="menu-cat-link">Specials</a>
+                <a href="#salads" class="menu-cat-link">Salads</a>
+                <a href="#burgers" class="menu-cat-link">Burgers & Baskets</a>
+                <a href="#lil-suzys" class="menu-cat-link">Li'l Suzy's</a>
                 <a href="#tacos" class="menu-cat-link">Taco Tuesday</a>
             </nav>
         </div>
@@ -78,87 +79,304 @@
     <main class="menu-content">
         <div class="container">
             
+            <!-- Breakfast -->
+            <section id="breakfast" class="menu-category">
+                <h2 class="category-title">Breakfast</h2>
+                <p class="category-note">Breakfast served Wednesday 8 AM - 11 AM & Sunday 10 AM - 2 PM</p>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/french-toast.jpg" alt="French Toast">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">French Toast</h3>
+                            <p class="item-description">Two pieces of texas toast</p>
+                            <span class="item-price">$5.00</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/biscuits-gravy.jpg" alt="Biscuits and Gravy">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Biscuits & Gravy</h3>
+                            <p class="item-description">1 Biscuit or 2 Biscuits</p>
+                            <span class="item-price">$5.00</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/breakfast-sandwich.jpg" alt="Breakfast Sandwich">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Breakfast Sandwich</h3>
+                            <p class="item-description">Choice of meat, cheese, 1 egg - cooked to order, served on choice of toast</p>
+                            <span class="item-price">$7.00 / $7.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/omelette.jpg" alt="3 Egg Omelette">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">3 Egg Omelette / Cheese</h3>
+                            <p class="item-description">Additional Eggs $1.50 ea</p>
+                            <span class="item-price">$5.00</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Breakfast Sides</h3>
+                            <p class="item-description">
+                                Bacon (2 pcs) - $3.00<br>
+                                Ham - $4.00<br>
+                                Sausage - $4.00<br>
+                                Hashbrowns - $4.00<br>
+                                Eggs - $2.00<br>
+                                Toast (2 pcs) White/Wheat/Rye - $1.50 ea / $1.00
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Omelette Add-Ons</h3>
+                            <p class="item-description">
+                                Green Pepper, Mushrooms, Onion, Tomato - $0.50 ea<br>
+                                Extra Cheese (American, Swiss, Cheddar) - $0.50 ea<br>
+                                Bacon / Ham / Sausage - $2.00 ea
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Starters & Sides -->
             <section id="starters" class="menu-category">
                 <h2 class="category-title">Suzanne's Starters & Sides</h2>
                 <div class="menu-grid">
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/southwestern-egg-rolls.jpg" alt="Southwestern egg rolls with dipping sauce">
+                            <img src="images/menu/southwestern-egg-rolls.jpg" alt="Southwestern Egg Rolls">
                         </div>
                         <div class="menu-item-content">
                             <h3 class="item-name">Southwestern Egg Rolls</h3>
-                            <p class="item-description">Seasoned crispy rolls packed with jalapeño cilantro</p>
+                            <p class="item-description">4 Homemade Southwest chicken egg rolls served with jalapeno cilantro sauce</p>
                             <span class="item-price">$8.95</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/pork-cheddar-fried-shrimp.jpg" alt="Pork cheddar bites and fried shrimp">
+                            <img src="images/menu/piglets.jpg" alt="Piglets">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">Pork Cheddar & Fried Shrimp</h3>
-                            <p class="item-description">Savory pork and crispy shrimp combo</p>
+                            <h3 class="item-name">Piglets</h3>
+                            <p class="item-description">Handbreaded & fried strips of pork loin served with country gravy</p>
                             <span class="item-price">$8.95</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/breaded-pickles.jpg" alt="Breaded fried pickles">
+                            <img src="images/menu/bang-bang-shrimp.jpg" alt="Bang Bang Shrimp">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">Breaded Pickles</h3>
-                            <p class="item-description">Served with country gravy</p>
-                            <span class="item-price">$5.95</span>
+                            <h3 class="item-name">Bang Bang Shrimp</h3>
+                            <p class="item-description">6 Jumbo fried shrimp served with bang bang sauce</p>
+                            <span class="item-price">$8.95</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/breaded-mushrooms.jpg" alt="Breaded fried mushrooms">
+                            <img src="images/menu/breaded-beef-bites.jpg" alt="Breaded Beef Bites">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">Breaded Mushrooms</h3>
-                            <p class="item-description">Served with country gravy</p>
-                            <span class="item-price">$5.95</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <img src="images/menu/breaded-pretzels.jpg" alt="Breaded soft pretzels">
-                        </div>
-                        <div class="menu-item-content">
-                            <h3 class="item-name">Breaded Pretzels</h3>
-                            <p class="item-description">Served with country gravy</p>
-                            <span class="item-price">$5.95</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <img src="images/menu/mozzarella-sticks.jpg" alt="Golden fried mozzarella sticks">
-                        </div>
-                        <div class="menu-item-content">
-                            <h3 class="item-name">Mozzarella Sticks</h3>
-                            <p class="item-description">Golden and melty with marinara sauce</p>
+                            <h3 class="item-name">Breaded Beef Bites</h3>
+                            <p class="item-description">9 Breaded beef bites served with country gravy</p>
                             <span class="item-price">$7.95</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/jalapeno-poppers.jpg" alt="Jalapeño poppers stuffed with cheese">
+                            <img src="images/menu/teppe-fries.jpg" alt="Teppe Fries">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">Jalapeño Poppers</h3>
-                            <p class="item-description">Served with jalapeño cilantro ranch</p>
+                            <h3 class="item-name">Teppe Fries</h3>
+                            <p class="item-description">Thick cut fries, smothered in house gravy</p>
+                            <span class="item-price">$7.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/french-fries.jpg" alt="French Fries">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">French Fries</h3>
+                            <p class="item-description">Handcut, homemade fries</p>
+                            <span class="item-price">$2.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/tater-tots.jpg" alt="Tater Tots">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Tater Tots</h3>
+                            <span class="item-price">$3.50</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/onion-rings.jpg" alt="Onion Rings">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Onion Rings</h3>
+                            <span class="item-price">$5.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/fried-pickles.jpg" alt="Fried Pickles">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Fried Pickles</h3>
+                            <span class="item-price">$5.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/fried-mushrooms.jpg" alt="Fried Mushrooms">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Fried Mushrooms</h3>
+                            <span class="item-price">$5.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/bottlecaps.jpg" alt="Bottlecaps">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Bottlecaps</h3>
+                            <span class="item-price">$5.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/mozzarella-sticks.jpg" alt="Mozzarella Sticks">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Mozzarella Sticks</h3>
+                            <span class="item-price">$7.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/jalapeno-poppers.jpg" alt="Jalapeno Poppers">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Jalapeno Poppers</h3>
+                            <span class="item-price">$7.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/firecrackers.jpg" alt="Firecrackers">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Firecrackers</h3>
                             <span class="item-price">$7.95</span>
                         </div>
                     </div>
                 </div>
+
+                <div style="margin-top: 2rem; background-color: #f5f5f5; padding: 1.5rem; border-radius: 8px;">
+                    <h3 style="color: #1E3A5F; margin-bottom: 1rem;">Dressings & Sauces</h3>
+                    <p style="margin-bottom: 0.5rem;">Ranch, Italian, Honey Mustard, Dorothy Lynch, 57, A1, BBQ, Thousand Island, Country gravy, Tarter, Cocktail</p>
+                    <p style="margin-top: 1rem;">
+                        Jalapeno Cilantro Ranch* - $1.00<br>
+                        Bang Bang Sauce* - $1.00<br>
+                        Homemade Bacon Jam* - $3.00<br>
+                        <em>*Based upon availability</em>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Specials -->
+            <section id="specials" class="menu-category">
+                <h2 class="category-title">Suzanne's Specials</h2>
+                <p class="category-note">Ask about our daily special!</p>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/bowl-of-chili.jpg" alt="Bowl of Chili">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Bowl of Chili</h3>
+                            <p class="item-description">Suzanne's homemade chili. Not too hot, but flavorful</p>
+                            <span class="item-price">$5.00</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/chili-dog.jpg" alt="Chili Dog">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Chili Dog</h3>
+                            <p class="item-description">100% Beef Hotdog smothered in chili</p>
+                            <span class="item-price">$7.00</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/frito-chili-pie.jpg" alt="Frito Chili Pie">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Frito Chili Pie</h3>
+                            <p class="item-description">Frito Chips smothered in chili & cheese<br>Add onions or jalapenos $0.50 each</p>
+                            <span class="item-price">$7.00</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/cinnamon-rolls.jpg" alt="Cinnamon Rolls">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Cinnamon Rolls*</h3>
+                            <span class="item-price">$3.00</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/homemade-cookies.jpg" alt="Homemade Cookies">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Homemade Cookies*</h3>
+                            <span class="item-price">$1.00 / 2</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="category-note" style="margin-top: 1rem;">*based upon availability</p>
             </section>
 
             <!-- Salads -->
@@ -167,219 +385,300 @@
                 <div class="menu-grid">
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/side-salad.jpg" alt="Fresh garden side salad">
+                            <img src="images/menu/side-salad.jpg" alt="Side Salad">
                         </div>
                         <div class="menu-item-content">
                             <h3 class="item-name">Side Salad</h3>
-                            <p class="item-description">Fresh greens with your choice of dressing</p>
                             <span class="item-price">$2.95</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/salad-with-ham.jpg" alt="Salad topped with cubed ham">
+                            <img src="images/menu/large-garden-salad.jpg" alt="Large Garden Salad">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">Salad with Cubed Ham</h3>
-                            <p class="item-description">Garden salad topped with cubed ham</p>
-                            <span class="item-price">$5.25</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <img src="images/menu/salad-with-chicken.jpg" alt="Salad with grilled or crispy chicken">
-                        </div>
-                        <div class="menu-item-content">
-                            <h3 class="item-name">Salad with Chicken</h3>
-                            <p class="item-description">Your choice of crispy or grilled chicken</p>
-                            <span class="item-price">$5.25</span>
+                            <h3 class="item-name">Large Garden Salad</h3>
+                            <p class="item-description">Topped with choice of cubed ham, crispy or grilled chicken</p>
+                            <span class="item-price">$9.25</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Burgers & Sandwiches -->
+            <!-- Burgers & Baskets -->
             <section id="burgers" class="menu-category">
                 <h2 class="category-title">Burgers & Baskets</h2>
-                <p class="category-note">All burgers served with lettuce, pickle, onion, and french fries</p>
+                <p class="category-note">All sandwiches and baskets served with fries | All sandwiches served with lettuce, pickle, onion<br>
+                Add tomato $0.50 | Substitute tater tots or onion rings for $2.00 | Substitute $5.95 starters for $4.00 | Add chili to anything $2.00</p>
                 <div class="menu-grid">
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/hamburger.jpg" alt="Classic hamburger with fries">
+                            <img src="images/menu/suzy-burger.jpg" alt="Suzy Burger">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">Hamburger</h3>
-                            <p class="item-description">Classic burger with all the fixings</p>
+                            <h3 class="item-name">*Suzy Burger</h3>
+                            <p class="item-description">7 oz Burger patty with cream cheese and Suzanne's HOMEMADE bacon jam</p>
+                            <span class="item-price">$12.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/hamburger.jpg" alt="Hamburger">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">*Hamburger</h3>
+                            <p class="item-description">7 oz Burger patty</p>
                             <span class="item-price">$9.95</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/cheeseburger.jpg" alt="Cheeseburger with melted cheese">
+                            <img src="images/menu/cheeseburger.jpg" alt="Cheeseburger">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">Cheeseburger</h3>
-                            <p class="item-description">Burger topped with melted cheese</p>
+                            <h3 class="item-name">*Cheeseburger</h3>
+                            <p class="item-description">7 oz Burger patty with cheese</p>
                             <span class="item-price">$10.95</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/double-cheeseburger.jpg" alt="Double patty cheeseburger">
+                            <img src="images/menu/double-cheeseburger.jpg" alt="Double Cheeseburger">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">Double Cheeseburger</h3>
-                            <p class="item-description">Two patties with double the cheese</p>
+                            <h3 class="item-name">*Double Cheeseburger</h3>
+                            <p class="item-description">Two 7 oz Burger patty with cheese</p>
+                            <span class="item-price">$15.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/bacon-cheeseburger.jpg" alt="Bacon Cheeseburger">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">*Bacon Cheeseburger</h3>
+                            <p class="item-description">7 oz Burger patty with cheese and bacon</p>
                             <span class="item-price">$11.95</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/bacon-cheeseburger.jpg" alt="Bacon cheeseburger with crispy bacon">
+                            <img src="images/menu/jalapeno-cheeseburger.jpg" alt="Jalapeno Cheeseburger">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">Bacon Cheeseburger</h3>
-                            <p class="item-description">Cheese and crispy bacon</p>
+                            <h3 class="item-name">*Jalapeno Cheeseburger</h3>
+                            <p class="item-description">7 oz Burger patty with cheese and jalapenos</p>
                             <span class="item-price">$11.95</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/mushroom-swiss-burger.jpg" alt="Mushroom and Swiss cheese burger">
+                            <img src="images/menu/mushroom-swiss-burger.jpg" alt="Mushroom Swiss Burger">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">Mushroom Swiss Burger</h3>
-                            <p class="item-description">Sautéed mushrooms and Swiss cheese</p>
+                            <h3 class="item-name">*Mushroom Swiss Burger</h3>
+                            <p class="item-description">7 oz Burger patty with swiss cheese and mushrooms</p>
                             <span class="item-price">$11.95</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/grilled-chicken-sandwich.jpg" alt="Grilled chicken breast sandwich">
+                            <img src="images/menu/breakfast-burger.jpg" alt="Breakfast Burger">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">*Breakfast Burger</h3>
+                            <p class="item-description">7 oz Burger patty with cheese, topped with bacon & a fried egg</p>
+                            <span class="item-price">$12.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/vikburger.jpg" alt="Vikburger">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">*Vikburger</h3>
+                            <p class="item-description">7 oz Burger patty with cheese, topped with grilled jalapenos and sauerkraut</p>
+                            <span class="item-price">$11.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/patty-melt.jpg" alt="Patty Melt">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">*Patty Melt</h3>
+                            <p class="item-description">7 oz Burger patty with swiss cheese and grilled onions on rye bread</p>
+                            <span class="item-price">$11.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/reuben.jpg" alt="Reuben">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Reuben</h3>
+                            <p class="item-description">Corned beef, sauerkraut and swiss cheese on rye bread</p>
+                            <span class="item-price">$11.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/grilled-chicken-sandwich.jpg" alt="Grilled Chicken Sandwich">
                         </div>
                         <div class="menu-item-content">
                             <h3 class="item-name">Grilled Chicken Sandwich</h3>
-                            <p class="item-description">Marinated grilled chicken breast</p>
+                            <p class="item-description">Grilled chicken patty on a bun</p>
                             <span class="item-price">$10.95</span>
                         </div>
                     </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/fish-sandwich.jpg" alt="Fish Sandwich">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Fish Sandwich</h3>
+                            <p class="item-description">Hand breaded fish on a bun</p>
+                            <span class="item-price">$10.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/ham-and-cheese.jpg" alt="Ham & Cheese">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Ham & Cheese</h3>
+                            <p class="item-description">Ham & American Cheese served on Texas Toast - Grilled or cold</p>
+                            <span class="item-price">$7.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/chicken-strips.jpg" alt="Chicken Strips">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Chicken Strips</h3>
+                            <p class="item-description">4 Chicken Strips</p>
+                            <span class="item-price">$10.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/shrimp.jpg" alt="Shrimp">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Shrimp</h3>
+                            <p class="item-description">6 Jumbo fried shrimp</p>
+                            <span class="item-price">$11.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/fish.jpg" alt="Fish">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Fish</h3>
+                            <p class="item-description">Hand breaded fish</p>
+                            <span class="item-price">$9.95</span>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <!-- Kids Menu -->
-            <section id="kids" class="menu-category">
-                <h2 class="category-title">Lil Susy's Menu</h2>
-                <p class="category-note">Perfect portions for kids, all served with fries</p>
+            <!-- Li'l Suzy's Menu -->
+            <section id="lil-suzys" class="menu-category">
+                <h2 class="category-title">Li'l Suzy's Menu</h2>
+                <p class="category-note">For kids 12 and under</p>
                 <div class="menu-grid">
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/kids-hamburger.jpg" alt="Kids hamburger with fries">
+                            <img src="images/menu/kids-hamburger-cheeseburger.jpg" alt="Kids Hamburger / Cheeseburger">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">Kid's Hamburger</h3>
-                            <p class="item-description">Junior-sized burger, served with fries</p>
+                            <h3 class="item-name">*Hamburger / Cheeseburger</h3>
+                            <p class="item-description">5 oz hamburger served with fries</p>
                             <span class="item-price">$6.00</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/kids-cheeseburger.jpg" alt="Kids cheeseburger with fries">
+                            <img src="images/menu/kids-hotdog.jpg" alt="Kids Hotdog">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">Kid's Cheeseburger</h3>
-                            <p class="item-description">Junior cheeseburger, served with fries</p>
+                            <h3 class="item-name">Hotdog</h3>
+                            <p class="item-description">Beef Hotdog served with fries</p>
+                            <span class="item-price">$5.00</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/kids-grilled-cheese.jpg" alt="Kids Grilled Cheese">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Grilled Cheese</h3>
+                            <p class="item-description">American cheese on Texas Toast served with fries</p>
+                            <span class="item-price">$5.00</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/kids-chicken-strips.jpg" alt="Kids Chicken Strips">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Chicken Strips</h3>
+                            <p class="item-description">2 Chicken strips served with fries</p>
                             <span class="item-price">$6.00</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/kids-hotdog.jpg" alt="Kids hotdog with fries">
+                            <img src="images/menu/kids-popcorn-chicken.jpg" alt="Kids Popcorn Chicken">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">Kid's Hotdog</h3>
-                            <p class="item-description">All-beef hotdog, served with fries</p>
-                            <span class="item-price">$5.00</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <img src="images/menu/kids-grilled-cheese.jpg" alt="Kids grilled cheese on Texas toast">
-                        </div>
-                        <div class="menu-item-content">
-                            <h3 class="item-name">Grilled Cheese on Texas Toast</h3>
-                            <p class="item-description">Classic grilled cheese comfort</p>
-                            <span class="item-price">$5.00</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Specials -->
-            <section id="specials" class="menu-category">
-                <h2 class="category-title">Suzanne's Specials</h2>
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <img src="images/menu/bowl-of-chili.jpg" alt="Hot bowl of house chili">
-                        </div>
-                        <div class="menu-item-content">
-                            <h3 class="item-name">Bowl of Chili</h3>
-                            <p class="item-description">House-made chili</p>
-                            <span class="item-price">$5.00</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <img src="images/menu/frito-chili-boat.jpg" alt="Frito chili boat">
-                        </div>
-                        <div class="menu-item-content">
-                            <h3 class="item-name">Frito Chili Boat</h3>
-                            <p class="item-description">Chili served over Fritos with toppings</p>
-                            <span class="item-price">$6.50</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <img src="images/menu/chili-dog.jpg" alt="Chili dog with melted cheese">
-                        </div>
-                        <div class="menu-item-content">
-                            <h3 class="item-name">Chili Dog</h3>
-                            <p class="item-description">Double beef hotdog smothered in chili</p>
-                            <span class="item-price">$4.00</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <img src="images/menu/french-toast.jpg" alt="French toast with syrup">
-                        </div>
-                        <div class="menu-item-content">
-                            <h3 class="item-name">French Toast</h3>
-                            <p class="item-description">Breakfast served Wednesday & Sunday 8-11 AM</p>
-                            <span class="item-price">$5.00</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <img src="images/menu/french-toast-with-fruit.jpg" alt="French toast topped with fruit">
-                        </div>
-                        <div class="menu-item-content">
-                            <h3 class="item-name">French Toast with Fruit or Whipped Cream</h3>
-                            <p class="item-description">Add strawberries, blueberries, or whipped cream</p>
+                            <h3 class="item-name">Popcorn Chicken</h3>
+                            <p class="item-description">Fried chicken bites served with fries</p>
                             <span class="item-price">$6.00</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/kids-breaded-beef-bites.jpg" alt="Kids Breaded Beef Bites">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Breaded Beef Bites</h3>
+                            <p class="item-description">6 Breaded beef bites & gravy served with fries</p>
+                            <span class="item-price">$6.00</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/kids-pb-and-j-fruit.jpg" alt="Kids PB & J and Fruit">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">PB & J and Fruit</h3>
+                            <span class="item-price">$5.00</span>
                         </div>
                     </div>
                 </div>
@@ -387,126 +686,173 @@
 
             <!-- Taco Tuesday -->
             <section id="tacos" class="menu-category">
-                <h2 class="category-title">Taco Tuesday</h2>
-                <p class="category-note">Available all day every Tuesday - Choose ground beef or chicken</p>
+                <h2 class="category-title">Taco Tuesday!</h2>
                 <div class="menu-grid">
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/taco-single.jpg" alt="Single taco with toppings">
+                            <img src="images/menu/soft-shell-taco.jpg" alt="Soft Shell Taco">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">Taco (Single)</h3>
-                            <p class="item-description">Soft or hard shell with all the toppings</p>
+                            <h3 class="item-name">*Soft Shell Taco</h3>
+                            <p class="item-description">Meat, Cheese, Lettuce, Tomato, Onion</p>
+                            <span class="item-price">$4.50</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/hard-shell-taco.jpg" alt="Hard Shell Taco">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">*Hard Shell Taco</h3>
+                            <p class="item-description">Meat, Cheese, Lettuce</p>
                             <span class="item-price">$2.50</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/taco-two-combo.jpg" alt="Two tacos combo">
+                            <img src="images/menu/fried-flour-taco.jpg" alt="Fried Flour Taco">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">2 Tacos Combo</h3>
-                            <p class="item-description">Two tacos with lettuce, tomato, cheese</p>
-                            <span class="item-price">$5.00</span>
+                            <h3 class="item-name">*Fried Flour Taco</h3>
+                            <p class="item-description">Meat, Cheese, Lettuce, Tomato, Onion</p>
+                            <span class="item-price">$5.50</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/taco-three-combo.jpg" alt="Three tacos combo">
+                            <img src="images/menu/enchilada.jpg" alt="Enchilada">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">3 Tacos Combo</h3>
-                            <p class="item-description">Three tacos loaded with toppings</p>
+                            <h3 class="item-name">*Enchilada</h3>
+                            <p class="item-description">(1) Dressed + $1.00 / (2) (Lettuce, tomato, onion)</p>
                             <span class="item-price">$6.50</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/taco-salad.jpg" alt="Taco salad in crispy shell">
+                            <img src="images/menu/taco-burger.jpg" alt="Taco Burger">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">Taco Salad</h3>
-                            <p class="item-description">Ground beef or chicken with lettuce, tomato, cheese, sour cream, and salsa</p>
-                            <span class="item-price">$6.50</span>
+                            <h3 class="item-name">*Taco Burger</h3>
+                            <p class="item-description">Cheese, Lettuce<br>*Served with Spanish rice</p>
+                            <span class="item-price">$9.95 / $8.95</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="images/menu/chimichanga.jpg" alt="Fried chimichanga with toppings">
+                            <img src="images/menu/jalapeno-stuffed-nachos.jpg" alt="Jalapeno Stuffed Loaded Nachos">
                         </div>
                         <div class="menu-item-content">
-                            <h3 class="item-name">Chimichanga</h3>
-                            <p class="item-description">Ground beef or chicken, fried and topped with lettuce, tomato, cheese, sour cream, and salsa</p>
-                            <span class="item-price">$6.50</span>
+                            <h3 class="item-name">Jalapeno Stuffed Loaded Nachos</h3>
+                            <span class="item-price">$9.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/churro-bites.jpg" alt="Churro Bites">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Churro Bites</h3>
+                            <p class="item-description">(12)</p>
+                            <span class="item-price">$3.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/menu/chips-queso.jpg" alt="Chips / Cup of Queso">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Chips / Cup of Queso</h3>
+                            <span class="item-price">$4.00</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Extras</h3>
+                            <p class="item-description">
+                                Nacho Cheese - $1.00<br>
+                                Jalapeno Cilantro Ranch - $1.00<br>
+                                Pico / *Guacamole / Sour Cream - $0.50
+                            </p>
                         </div>
                     </div>
                 </div>
+                <p class="category-note" style="margin-top: 1rem;">*Based upon availability</p>
             </section>
+
+            <!-- Food Safety Notice -->
+            <div style="margin: 3rem 0; padding: 1.5rem; background-color: #f5f5f5; border-radius: 8px; text-align: center;">
+                <p style="font-size: 0.9rem; color: #666; font-style: italic;">
+                    *Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness.
+                </p>
+                <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
+                    We apply a supplemental fee to all credit card transactions.
+                </p>
+            </div>
 
         </div>
     </main>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Hungry Yet?</h2>
-                <p>Call ahead for carry-out or visit us for dine-in</p>
-                <div class="cta-buttons">
-                    <a href="tel:+17856000000" class="btn btn-primary">Call to Order</a>
-                    <a href="beer-beverages.html" class="btn btn-outline">View Drinks Menu</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer class="site-footer">
+    <section class="site-footer">
         <div class="container">
-            <!-- Email Signup in Footer -->
             <div class="footer-newsletter">
-                <h3>Stay Connected</h3>
-                <p>Get our latest specials and events delivered to your inbox</p>
-                <form class="footer-newsletter-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                    <input type="email" name="email" placeholder="Enter your email" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                <h3>Stay Updated with Suzanne's Place</h3>
+                <p>Get exclusive offers, event announcements, and menu updates!</p>
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="footer-newsletter-form">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
                 </form>
+                <p class="footer-email">We respect your privacy. Unsubscribe anytime.</p>
             </div>
-            
+
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Suzanne's Place</h3>
-                    <p>Your neighborhood bar and grill</p>
                     <p class="footer-tagline">Cold Beer, Great Food</p>
-                    <p class="footer-email">Email: <a href="/cdn-cgi/l/email-protection#365f5850597645434c5758585345465a5755531855595b"><span class="__cf_email__" data-cfemail="b1d8dfd7def1c2c4cbd0dfdfd4c2c1ddd0d2d49fd2dedc">[email&#160;protected]</span></a></p>
+                    <p>Your neighborhood bar and grill serving Dorrance and beyond.</p>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Full Menu</a></li>
                         <li><a href="daily-specials.html">Daily Specials</a></li>
+                        <li><a href="menu.html">Full Menu</a></li>
+                        <li><a href="beer-beverages.html">Beer & Beverages</a></li>
                         <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p>310 U.S. Hwy 40<br>Dorrance, KS 67344</p>
-                    <p><a href="tel:+17856000000">(785) 600-0000</a></p>
-                </div>
-                
+
                 <div class="footer-section">
                     <h4>Hours</h4>
-                    <p>Daily: 11 AM - 9 PM</p>
-                    <p>Breakfast: Wed & Sun 8-11 AM</p>
+                    <p><strong>Daily:</strong> 11 AM - 9 PM</p>
+                    <p><strong>Breakfast:</strong> Wed & Sun 8-11 AM</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>310 U.S. Hwy 40<br>Dorrance, KS 67634</p>
+                    <p><a href="tel:+17856664242">(785) 666-4242</a></p>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p>&copy; 2025 Suzanne's Place. All rights reserved.</p>
+                <p>&copy; 2026 Suzanne's Place. All rights reserved.</p>
+                <p>Dine in or Carry-Out | Indoor and Outdoor Seating available</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
